@@ -5,3 +5,34 @@ require_relative "../lib/scraper.rb"
 
 
 CommandLineInterface.new.run
+
+
+require "dict/cli/version"
+require "open-uri"
+require "nokogiri"
+require "pry"
+
+#class CLI
+  def run 
+    puts "Welcome to your own word finder!"
+    puts "Main Menu"
+    puts "Please enter a word to look up its meaning:"
+  
+    html = open(https://www.merriam-webster.com)
+    doc = Nokogiri::HTML(html)
+    binding.pry 
+    
+    #dictionary.all.each.with_index(1) do |word, i|
+    #  puts "#{i} #{word}"
+   # end
+  end
+#end
+
+module Dict
+  module Cli
+    class Error < StandardError; end
+     Your code goes here...
+  end
+end
+
+
